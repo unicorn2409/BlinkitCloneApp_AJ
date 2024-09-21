@@ -5,4 +5,7 @@
 
     <color name="yellow">#ffbe0b</color>
     <color name="green">#008B13</color>
+    <color name="blue">#0000FF</color>
+    <color name="greyish_blue">#8d99ae</color>
+    <color name="white_yellow">#FFFFFFFF</color>
 </resources>

@@ -1,14 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignInFragment">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Sign In" />
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:padding="@dimen/_16sdp"
+        tools:context=".auth.SignInFragment">
 
-</FrameLayout>
+        <ImageView
+        android:id="@+id/ivBlinkitIcon"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/ic_blinkit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+        android:id="@+id/subTxtSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="India's last minute app"
+        android:textSize="22.10sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/ivBlinkitIcon"
+        app:layout_constraintStart_toStartOf="@id/ivBlinkitIcon"
+        app:layout_constraintEnd_toEndOf="@id/ivBlinkitIcon"/>
+
+        <TextView
+        android:id="@+id/txtLoginSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login or Signup"
+        android:textSize="16.90sp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/subTxtSignIn"
+        app:layout_constraintStart_toStartOf="@id/subTxtSignIn"
+        app:layout_constraintEnd_toEndOf="@id/subTxtSignIn"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayoutSignin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="@dimen/_16sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_16sdp"
+        app:boxCornerRadiusTopStart="@dimen/_16sdp"
+        app:endIconMode="clear_text"
+        app:layout_constraintTop_toBottomOf="@id/txtLoginSignup"
+        app:layout_constraintStart_toStartOf="@id/txtLoginSignup"
+        app:layout_constraintEnd_toEndOf="@id/txtLoginSignup">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUserNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/baseline_phone_24"
+            android:drawablePadding="@dimen/_8sdp"
+            android:hint="Enter Mobile Number"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="Continue"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#8d99ae"
+        app:cornerRadius="@dimen/_10ssp"
+        app:layout_constraintTop_toBottomOf="@id/txtInputLayoutSignin"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

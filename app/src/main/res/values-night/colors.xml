@@ -3,5 +3,8 @@
     <color name="black">#FFFFFFFF</color>
     <color name="white">#FF000000</color>
 
+    <color name="yellow">#ffbe0b</color>
     <color name="green">#008000</color>
+    <color name="greyish_blue">#8d99ae</color>
+    <color name="white_yellow">#ffbe0b</color>
 </resources>
